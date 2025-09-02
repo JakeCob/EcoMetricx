@@ -1,0 +1,2 @@
+# Minimal requirements for PDF extraction only
+pymupdf4llm>=0.0.27

@@ -20,6 +20,9 @@ conda activate pdf-extractor
 # Verify installation
 echo "🔍 Verifying installation..."
 python -c "import pymupdf4llm; print('✅ pymupdf4llm installed successfully')"
+python -c "import pymupdf; print('✅ PyMuPDF installed successfully')"
+python -c "import PIL; print('✅ Pillow installed successfully')"
+python -c "import pytesseract; print('✅ pytesseract installed successfully')"
 
 # Run tests
 echo "🧪 Running tests..."
@@ -33,3 +36,7 @@ echo "   conda activate pdf-extractor"
 echo ""
 echo "To test with your PDF, run:"
 echo "   python pdf_extractor.py your_document.pdf"
+echo ""
+echo "To extract images from your PDF, run:"
+echo "   python image_extractor.py your_document.pdf"
+echo "   python image_extractor.py your_document.pdf --enhance --verbose"

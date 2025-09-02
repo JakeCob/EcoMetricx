@@ -14,3 +14,6 @@ dependencies:
     - pymupdf4llm>=0.0.27
     - pytest>=7.0.0
     - pytest-cov>=4.0.0
+    - PyMuPDF>=1.21.0
+    - Pillow>=9.0.0
+    - pytesseract>=0.3.10

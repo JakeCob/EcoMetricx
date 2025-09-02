@@ -1,0 +1,50 @@
+{
+  "pdf_name": "test_info_extract.pdf",
+  "extraction_date": "2025-09-02T16:48:14.095802",
+  "image_locations": [
+    {
+      "filename": "test_info_extract_page0_img0_chart.jpg",
+      "page_number": 0,
+      "coordinates": {
+        "x": 416,
+        "y": 529,
+        "width": 469,
+        "height": 458
+      },
+      "classification": "chart"
+    },
+    {
+      "filename": "test_info_extract_page0_img1_unknown.jpg",
+      "page_number": 0,
+      "coordinates": {
+        "x": 509,
+        "y": 159,
+        "width": 77,
+        "height": 82
+      },
+      "classification": "unknown"
+    },
+    {
+      "filename": "test_info_extract_page0_img2_logo.jpg",
+      "page_number": 0,
+      "coordinates": {
+        "x": 30,
+        "y": 28,
+        "width": 127,
+        "height": 39
+      },
+      "classification": "logo"
+    },
+    {
+      "filename": "test_info_extract_page1_img0_logo.jpg",
+      "page_number": 1,
+      "coordinates": {
+        "x": 32,
+        "y": 681,
+        "width": 91,
+        "height": 28
+      },
+      "classification": "logo"
+    }
+  ]
+}

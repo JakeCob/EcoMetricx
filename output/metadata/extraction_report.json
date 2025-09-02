@@ -1,0 +1,165 @@
+{
+  "extraction_date": "2025-09-02T16:48:14.095462",
+  "source_pdf": "test_info_extract.pdf",
+  "total_images": 4,
+  "unique_images": 3,
+  "duplicates_found": 1,
+  "classification_summary": {
+    "type_counts": {
+      "chart": 1,
+      "unknown": 1,
+      "logo": 2
+    },
+    "average_confidence": {
+      "chart": 0.9,
+      "unknown": 0.3,
+      "logo": 0.9
+    }
+  },
+  "page_distribution": {
+    "0": 3,
+    "1": 1
+  },
+  "enhancement_applied": true,
+  "images": [
+    {
+      "filename": "test_info_extract_page0_img0_chart.jpg",
+      "page_number": 0,
+      "image_index": 0,
+      "coordinates": {
+        "x": 416,
+        "y": 529,
+        "width": 469,
+        "height": 458
+      },
+      "original_format": "PNG",
+      "size_bytes": 268789,
+      "dimensions": {
+        "width": 653,
+        "height": 637
+      },
+      "classification": {
+        "type": "chart",
+        "confidence": 0.9,
+        "reasoning": "large size, contains text",
+        "scores": {
+          "logo": 0.2,
+          "chart": 0.9,
+          "diagram": 0.8,
+          "photo": 0.9
+        }
+      },
+      "enhancement_applied": true,
+      "text_detected": true,
+      "color_palette": 1000,
+      "hash": "ff99bf1525ff0497",
+      "is_duplicate": false,
+      "aspect_ratio": 1.03,
+      "enhanced_filename": "test_info_extract_page0_img0_chart_enhanced.jpg"
+    },
+    {
+      "filename": "test_info_extract_page0_img1_unknown.jpg",
+      "page_number": 0,
+      "image_index": 1,
+      "coordinates": {
+        "x": 509,
+        "y": 159,
+        "width": 77,
+        "height": 82
+      },
+      "original_format": "PNG",
+      "size_bytes": 8061,
+      "dimensions": {
+        "width": 108,
+        "height": 115
+      },
+      "classification": {
+        "type": "unknown",
+        "confidence": 0.3,
+        "reasoning": "insufficient confidence in classification",
+        "scores": {
+          "logo": 0.4,
+          "chart": 0.4,
+          "diagram": 0.5,
+          "photo": 0.2
+        }
+      },
+      "enhancement_applied": true,
+      "text_detected": true,
+      "color_palette": 251,
+      "hash": "ff818181898189ff",
+      "is_duplicate": false,
+      "aspect_ratio": 0.94,
+      "enhanced_filename": "test_info_extract_page0_img1_unknown_enhanced.jpg"
+    },
+    {
+      "filename": "test_info_extract_page0_img2_logo.jpg",
+      "page_number": 0,
+      "image_index": 2,
+      "coordinates": {
+        "x": 30,
+        "y": 28,
+        "width": 127,
+        "height": 39
+      },
+      "original_format": "PNG",
+      "size_bytes": 10539,
+      "dimensions": {
+        "width": 178,
+        "height": 55
+      },
+      "classification": {
+        "type": "logo",
+        "confidence": 0.9,
+        "reasoning": "small size, header position, contains text",
+        "scores": {
+          "logo": 0.9,
+          "chart": 0.6,
+          "diagram": 0.3,
+          "photo": 0.4
+        }
+      },
+      "enhancement_applied": true,
+      "text_detected": true,
+      "color_palette": 1000,
+      "hash": "ff7f3f0000483f2f",
+      "is_duplicate": false,
+      "aspect_ratio": 3.24,
+      "enhanced_filename": "test_info_extract_page0_img2_logo_enhanced.jpg"
+    },
+    {
+      "filename": "test_info_extract_page1_img0_logo.jpg",
+      "page_number": 1,
+      "image_index": 0,
+      "coordinates": {
+        "x": 32,
+        "y": 681,
+        "width": 91,
+        "height": 28
+      },
+      "original_format": "PNG",
+      "size_bytes": 7720,
+      "dimensions": {
+        "width": 128,
+        "height": 40
+      },
+      "classification": {
+        "type": "logo",
+        "confidence": 0.9,
+        "reasoning": "small size, footer position, contains text",
+        "scores": {
+          "logo": 0.9,
+          "chart": 0.6,
+          "diagram": 0.3,
+          "photo": 0.0
+        }
+      },
+      "enhancement_applied": false,
+      "text_detected": true,
+      "color_palette": 977,
+      "hash": "ff7f3f0000483f2f",
+      "is_duplicate": true,
+      "aspect_ratio": 3.2
+    }
+  ]
+}
