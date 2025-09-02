@@ -8,3 +8,8 @@ numpy>=1.21.0
 PyMuPDF>=1.21.0
 Pillow>=9.0.0
 pytesseract>=0.3.10
+
+# Visual PDF Extraction dependencies
+pdf2image>=3.0.0
+pdfplumber>=0.9.0
+opencv-python>=4.8.0
