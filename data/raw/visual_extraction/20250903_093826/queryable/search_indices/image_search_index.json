@@ -1,0 +1,56 @@
+[
+  {
+    "id": "img_0",
+    "document_id": "test_info_extract",
+    "type": "chart",
+    "description": "Chart or data visualization related to energy tips",
+    "context": "energy_tips",
+    "confidence": 1.0,
+    "searchable": true
+  },
+  {
+    "id": "img_1",
+    "document_id": "test_info_extract",
+    "type": "qr_code",
+    "description": "Image element related to energy tips",
+    "context": "energy_tips",
+    "confidence": 0.9,
+    "searchable": true
+  },
+  {
+    "id": "img_2",
+    "document_id": "test_info_extract",
+    "type": "logo",
+    "description": "Company logo or branding element related to energy tips",
+    "context": "energy_tips",
+    "confidence": 1.0,
+    "searchable": true
+  },
+  {
+    "id": "img_3",
+    "document_id": "test_info_extract",
+    "type": "chart",
+    "description": "Chart or data visualization related to energy tips",
+    "context": "energy_tips",
+    "confidence": 1.0,
+    "searchable": true
+  },
+  {
+    "id": "img_4",
+    "document_id": "test_info_extract",
+    "type": "qr_code",
+    "description": "Image element related to energy tips",
+    "context": "energy_tips",
+    "confidence": 0.9,
+    "searchable": true
+  },
+  {
+    "id": "img_5",
+    "document_id": "test_info_extract",
+    "type": "logo",
+    "description": "Company logo or branding element related to energy tips",
+    "context": "energy_tips",
+    "confidence": 1.0,
+    "searchable": true
+  }
+]

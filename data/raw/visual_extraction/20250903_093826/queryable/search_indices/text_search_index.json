@@ -1,0 +1,18 @@
+[
+  {
+    "id": "text_0",
+    "document_id": "test_info_extract",
+    "method": "enhanced_pdf",
+    "content_preview": "",
+    "confidence": 95,
+    "searchable": true
+  },
+  {
+    "id": "text_1",
+    "document_id": "test_info_extract",
+    "method": "visual_ocr",
+    "content_preview": "",
+    "confidence": 89.0923491414289,
+    "searchable": true
+  }
+]

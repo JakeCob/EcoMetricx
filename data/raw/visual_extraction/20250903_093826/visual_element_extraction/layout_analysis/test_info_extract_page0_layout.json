@@ -1,0 +1,270 @@
+{
+  "image_dimensions": {
+    "width": 2550,
+    "height": 3301
+  },
+  "regions": [
+    {
+      "id": 0,
+      "type": "table",
+      "bbox": [
+        1344,
+        2057,
+        1112,
+        931
+      ],
+      "confidence": 0.3,
+      "area": 1034514.0,
+      "aspect_ratio": 1.1944146079484426,
+      "features": {
+        "dimensions": {
+          "width": 1112,
+          "height": 931
+        },
+        "area": 1034514.0,
+        "aspect_ratio": 1.1944146079484426,
+        "position": {
+          "x": 1344,
+          "y": 2057
+        },
+        "intensity_stats": {
+          "mean": 234.66511409561932,
+          "std": 53.94980756879031,
+          "min": 0,
+          "max": 255
+        },
+        "texture_lbp_variance": 1.76338160199005,
+        "texture_contrast": 559.9626525488209,
+        "texture_dissimilarity": 4.0910782807604065
+      },
+      "position": {
+        "absolute": {
+          "x": 1344,
+          "y": 2057,
+          "center_x": 1900,
+          "center_y": 2522
+        },
+        "relative": {
+          "x": 0.5270588235294118,
+          "y": 0.6231445016661618,
+          "center_x": 0.7450980392156863,
+          "center_y": 0.7640109057861254
+        },
+        "quadrant": "bottom_right",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.3,
+          "chart": 0.1,
+          "image": 0.15,
+          "text": 0.0,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "bbox": [
+        126,
+        2057,
+        1112,
+        931
+      ],
+      "confidence": 0.3,
+      "area": 1034513.0,
+      "aspect_ratio": 1.1944146079484426,
+      "features": {
+        "dimensions": {
+          "width": 1112,
+          "height": 931
+        },
+        "area": 1034513.0,
+        "aspect_ratio": 1.1944146079484426,
+        "position": {
+          "x": 126,
+          "y": 2057
+        },
+        "intensity_stats": {
+          "mean": 241.69397028027416,
+          "std": 47.53615760631979,
+          "min": 0,
+          "max": 255
+        },
+        "texture_lbp_variance": 0.8088787611363099,
+        "texture_contrast": 604.7618338633006,
+        "texture_dissimilarity": 4.5020878027652405
+      },
+      "position": {
+        "absolute": {
+          "x": 126,
+          "y": 2057,
+          "center_x": 682,
+          "center_y": 2522
+        },
+        "relative": {
+          "x": 0.04941176470588235,
+          "y": 0.6231445016661618,
+          "center_x": 0.26745098039215687,
+          "center_y": 0.7640109057861254
+        },
+        "quadrant": "bottom_left",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.3,
+          "chart": 0.0,
+          "image": 0.0,
+          "text": 0.0,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "bbox": [
+        991,
+        1302,
+        1463,
+        637
+      ],
+      "confidence": 0.5,
+      "area": 931213.0,
+      "aspect_ratio": 2.2967032967032965,
+      "features": {
+        "dimensions": {
+          "width": 1463,
+          "height": 637
+        },
+        "area": 931213.0,
+        "aspect_ratio": 2.2967032967032965,
+        "position": {
+          "x": 991,
+          "y": 1302
+        },
+        "intensity_stats": {
+          "mean": 234.34390850824792,
+          "std": 52.33595508342262,
+          "min": 0,
+          "max": 255
+        },
+        "texture_lbp_variance": 0.46662629316679494,
+        "texture_contrast": 341.84719540768003,
+        "texture_dissimilarity": 2.478527725938318
+      },
+      "position": {
+        "absolute": {
+          "x": 991,
+          "y": 1302,
+          "center_x": 1722,
+          "center_y": 1620
+        },
+        "relative": {
+          "x": 0.38862745098039214,
+          "y": 0.3944259315358982,
+          "center_x": 0.6752941176470588,
+          "center_y": 0.4907603756437443
+        },
+        "quadrant": "top_right",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.5,
+        "scores": {
+          "table": 0.5,
+          "chart": 0.1,
+          "image": 0.15,
+          "text": 0.3,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "bbox": [
+        126,
+        1302,
+        749,
+        637
+      ],
+      "confidence": 0.3,
+      "area": 476735.0,
+      "aspect_ratio": 1.1758241758241759,
+      "features": {
+        "dimensions": {
+          "width": 749,
+          "height": 637
+        },
+        "area": 476735.0,
+        "aspect_ratio": 1.1758241758241759,
+        "position": {
+          "x": 126,
+          "y": 1302
+        },
+        "intensity_stats": {
+          "mean": 240.48297782705563,
+          "std": 46.45061985299167,
+          "min": 0,
+          "max": 255
+        },
+        "texture_lbp_variance": 0.5251328874079777,
+        "texture_contrast": 391.37072171525955,
+        "texture_dissimilarity": 2.894874033529496
+      },
+      "position": {
+        "absolute": {
+          "x": 126,
+          "y": 1302,
+          "center_x": 500,
+          "center_y": 1620
+        },
+        "relative": {
+          "x": 0.04941176470588235,
+          "y": 0.3944259315358982,
+          "center_x": 0.19607843137254902,
+          "center_y": 0.4907603756437443
+        },
+        "quadrant": "top_left",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.3,
+          "chart": 0.0,
+          "image": 0.0,
+          "text": 0.0,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    }
+  ],
+  "layout_type": "multi_column",
+  "reading_order": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "analysis_metadata": {
+    "total_regions": 4,
+    "region_types": {
+      "table": 4
+    },
+    "analysis_date": "2025-09-03T08:37:29.703332"
+  }
+}

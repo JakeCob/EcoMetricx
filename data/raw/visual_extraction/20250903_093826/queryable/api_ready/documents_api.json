@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "total": 1,
+  "data": [
+    {
+      "document_id": "test_info_extract",
+      "original_path": "/root/Programming Projects/Personal/EcoMetricx/task/test_info_extract.pdf",
+      "registered_at": "2025-09-03T08:37:31.269220",
+      "file_size": 116817,
+      "processing_status": "registered",
+      "extractions_completed": []
+    }
+  ]
+}

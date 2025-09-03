@@ -1,0 +1,15 @@
+{
+  "extraction_method": "visual_elements",
+  "document_id": "test_info_extract",
+  "timestamp": "20250903_083730",
+  "processing_time": 4.059200048446655,
+  "total_elements": 0,
+  "breakdown": {
+    "tables": 0,
+    "charts": 0,
+    "images": 0
+  },
+  "saved_files": {
+    "elements_manifest": "output/documents/test_info_extract/visual_elements/metadata/test_info_extract_20250903_083730_elements_manifest.json"
+  }
+}

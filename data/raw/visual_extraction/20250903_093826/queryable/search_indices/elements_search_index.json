@@ -1,0 +1,24 @@
+[
+  {
+    "id": "elem_0",
+    "document_id": "test_info_extract",
+    "total_elements": 0,
+    "breakdown": {
+      "tables": 0,
+      "charts": 0,
+      "images": 0
+    },
+    "searchable": true
+  },
+  {
+    "id": "elem_1",
+    "document_id": "test_info_extract",
+    "total_elements": 0,
+    "breakdown": {
+      "tables": 0,
+      "charts": 0,
+      "images": 0
+    },
+    "searchable": true
+  }
+]

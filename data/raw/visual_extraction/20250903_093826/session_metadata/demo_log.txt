@@ -1,0 +1,18 @@
+2025-09-03 08:24:07,451 - EcoMetricx_Demo - INFO - 🚀 EcoMetricx Demo logging initialized
+2025-09-03 08:24:07,452 - EcoMetricx_Demo - INFO - Python version: 3.11.13
+2025-09-03 08:24:07,452 - EcoMetricx_Demo - INFO - Working directory: /root/Programming Projects/Personal/EcoMetricx
+2025-09-03 08:24:07,453 - EcoMetricx_Demo - INFO - Session ID: 20250903_082405
+2025-09-03 08:24:07,454 - EcoMetricx_Demo - INFO - Timestamp: 2025-09-03 08:24:07
+2025-09-03 08:24:09,580 - EcoMetricx_Demo - INFO - ✅ Tesseract OCR version: 4.1.1
+2025-09-03 08:24:09,643 - EcoMetricx_Demo - INFO - ✅ OCR test completed successfully
+2025-09-03 08:24:13,491 - EcoMetricx_Demo - INFO - ✅ PDF processing libraries ready
+2025-09-03 08:24:13,492 - EcoMetricx_Demo - INFO - ✅ Image processing libraries ready
+2025-09-03 08:24:13,495 - EcoMetricx_Demo - INFO - ✅ OCR engine ready
+2025-09-03 08:24:13,496 - EcoMetricx_Demo - INFO - ✅ Computer vision libraries ready
+2025-09-03 08:24:23,500 - enhanced_pdf_extractor - INFO - Starting enhanced extraction from: /root/Programming Projects/Personal/EcoMetricx/task/test_info_extract.pdf
+2025-09-03 08:24:23,847 - enhanced_pdf_extractor - INFO - Successfully extracted text from 2 pages
+2025-09-03 08:24:25,432 - visual_pdf_extractor.VisualPDFExtractor - INFO - Starting visual extraction of /root/Programming Projects/Personal/EcoMetricx/task/test_info_extract.pdf
+2025-09-03 08:24:25,433 - visual_pdf_extractor.VisualPDFExtractor - INFO - Converting PDF to images at 300 DPI
+2025-09-03 08:24:26,014 - visual_pdf_extractor.VisualPDFExtractor - INFO - Processing page 1/2
+2025-09-03 08:24:27,477 - visual_pdf_extractor.VisualPDFExtractor - INFO - Processing page 2/2
+2025-09-03 08:24:28,977 - visual_pdf_extractor.VisualPDFExtractor - INFO - Visual extraction completed. Average confidence: 89.1%

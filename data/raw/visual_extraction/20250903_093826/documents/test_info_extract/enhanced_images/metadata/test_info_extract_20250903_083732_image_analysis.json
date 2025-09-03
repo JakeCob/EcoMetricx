@@ -1,0 +1,405 @@
+{
+  "source_pdf": "test_info_extract.pdf",
+  "extraction_date": "2025-09-03T08:37:31.540459",
+  "total_pages": 2,
+  "extracted_images": [
+    {
+      "filename": "test_info_extract_page0_img0_chart.jpg",
+      "page_number": 0,
+      "image_index": 0,
+      "coordinates": {
+        "x": 416,
+        "y": 529,
+        "width": 469,
+        "height": 458
+      },
+      "dimensions": {
+        "width": 653,
+        "height": 637
+      },
+      "original_format": "PNG",
+      "size_bytes": 268789,
+      "aspect_ratio": 1.03,
+      "classification": {
+        "type": "chart",
+        "confidence": 1.0,
+        "reasoning": "large size, contains text, energy_tip context",
+        "scores": {
+          "logo": 0.2,
+          "chart": 1.0,
+          "diagram": 0.5,
+          "photo": 1.0,
+          "qr_code": 0.9
+        },
+        "text_context_analysis": {
+          "has_company_references": true,
+          "has_data_references": true,
+          "has_qr_references": true,
+          "has_activity_references": true,
+          "context_type": "energy_tip"
+        }
+      },
+      "visibility_analysis": {
+        "visibility": "background",
+        "confidence": 0.4,
+        "detection_method": "coordinate_analysis",
+        "reasoning": "large size, page-sized dimensions",
+        "analysis_factors": {
+          "size_factor": {
+            "area_ratio": 0.8581752987390242,
+            "is_large": 1.0,
+            "is_small": -16.16350597478048,
+            "is_page_sized": 1.0
+          },
+          "position_factor": {
+            "is_header": 0.0,
+            "is_footer": 0.0,
+            "is_margin": 0.0,
+            "is_centered": 0.0
+          },
+          "overlap_factor": {
+            "text_density": 0.1668372569089048,
+            "likely_overlapping": 1.0,
+            "isolated": 0.0
+          },
+          "aspect_factor": {
+            "aspect_ratio": 1.0251177394034536,
+            "is_square": 1.0,
+            "is_wide": 0.0,
+            "is_tall": 0.0
+          },
+          "content_factor": {
+            "has_text": 0.0,
+            "color_richness": 0.1,
+            "likely_graphic": 0.0,
+            "likely_photo": 0.0
+          }
+        },
+        "position_ratios": {
+          "x_ratio": 0.68,
+          "y_ratio": 0.668,
+          "width_ratio": 1.067,
+          "height_ratio": 0.804
+        }
+      },
+      "characteristics": {
+        "mean_brightness": 238.87353862501533,
+        "std_brightness": 39.96957021163175,
+        "color_means": [
+          244.1785311603732,
+          238.38578857152473,
+          234.05629614314805
+        ],
+        "color_stddevs": [
+          28.49638825126317,
+          37.88542295198029,
+          49.93759647847026
+        ],
+        "dominant_color": {
+          "count": 235131,
+          "rgb": [
+            254,
+            254,
+            254
+          ]
+        },
+        "edge_density": 0.0669606044797469
+      },
+      "text_detected": true,
+      "hash": "ff99bf1525ff0497",
+      "is_duplicate": false,
+      "enhancement_applied": true,
+      "enhanced_filename": "test_info_extract_page0_img0_chart_enhanced.jpg",
+      "text_correlation": {
+        "nearby_text": "## Home Energy Report: **electricity**",
+        "context_scores": {
+          "energy_tips": 0.5625
+        },
+        "primary_context": "energy_tips",
+        "context_confidence": 0.56,
+        "type_specific_analysis": {
+          "type": "chart",
+          "specific_indicators": [],
+          "confidence": 0.0
+        },
+        "correlation_strength": 0.5625,
+        "supporting_relationships": []
+      },
+      "contextual_description": "Chart or data visualization related to energy tips"
+    },
+    {
+      "filename": "test_info_extract_page0_img1_qr_code.jpg",
+      "page_number": 0,
+      "image_index": 1,
+      "coordinates": {
+        "x": 509,
+        "y": 159,
+        "width": 77,
+        "height": 82
+      },
+      "dimensions": {
+        "width": 108,
+        "height": 115
+      },
+      "original_format": "PNG",
+      "size_bytes": 8061,
+      "aspect_ratio": 0.94,
+      "classification": {
+        "type": "qr_code",
+        "confidence": 0.9,
+        "reasoning": "contains text, energy_tip context",
+        "scores": {
+          "logo": 0.4,
+          "chart": 0.7,
+          "diagram": 0.5,
+          "photo": 0.3,
+          "qr_code": 0.9
+        },
+        "text_context_analysis": {
+          "has_company_references": true,
+          "has_data_references": true,
+          "has_qr_references": true,
+          "has_activity_references": true,
+          "context_type": "energy_tip"
+        }
+      },
+      "visibility_analysis": {
+        "visibility": "embedded",
+        "confidence": 0.6,
+        "detection_method": "coordinate_analysis",
+        "reasoning": "small size",
+        "analysis_factors": {
+          "size_factor": {
+            "area_ratio": 0.025623885918003565,
+            "is_large": 0.08541295306001188,
+            "is_small": 1.0,
+            "is_page_sized": 0.0
+          },
+          "position_factor": {
+            "is_header": 0.0,
+            "is_footer": 0.0,
+            "is_margin": 0.0,
+            "is_centered": 0.0
+          },
+          "overlap_factor": {
+            "text_density": 0.1668372569089048,
+            "likely_overlapping": 1.0,
+            "isolated": 0.0
+          },
+          "aspect_factor": {
+            "aspect_ratio": 0.9391304347826087,
+            "is_square": 1.0,
+            "is_wide": 0.0,
+            "is_tall": 0.0
+          },
+          "content_factor": {
+            "has_text": 0.0,
+            "color_richness": 0.1,
+            "likely_graphic": 0.0,
+            "likely_photo": 0.0
+          }
+        },
+        "position_ratios": {
+          "x_ratio": 0.832,
+          "y_ratio": 0.201,
+          "width_ratio": 0.176,
+          "height_ratio": 0.145
+        }
+      },
+      "characteristics": {
+        "mean_brightness": 150.92479871175524,
+        "std_brightness": 108.30787800600653,
+        "color_means": [
+          150.92479871175524,
+          150.92479871175524,
+          150.92479871175524
+        ],
+        "color_stddevs": [
+          108.30787800600653,
+          108.30787800600653,
+          108.30787800600653
+        ],
+        "dominant_color": {
+          "count": 3918,
+          "rgb": [
+            241,
+            241,
+            241
+          ]
+        },
+        "edge_density": 0.2896135265700483
+      },
+      "text_detected": true,
+      "hash": "ff818181898189ff",
+      "is_duplicate": false,
+      "enhancement_applied": true,
+      "enhanced_filename": "test_info_extract_page0_img1_qr_code_enhanced.jpg",
+      "text_correlation": {
+        "nearby_text": "## Home Energy Report: **electricity**",
+        "context_scores": {
+          "energy_tips": 0.5625
+        },
+        "primary_context": "energy_tips",
+        "context_confidence": 0.56,
+        "type_specific_analysis": {
+          "type": "qr_code",
+          "specific_indicators": [],
+          "confidence": 0.0
+        },
+        "correlation_strength": 0.5625,
+        "supporting_relationships": []
+      },
+      "contextual_description": "Image element related to energy tips"
+    },
+    {
+      "filename": "test_info_extract_page0_img2_logo.jpg",
+      "page_number": 0,
+      "image_index": 2,
+      "coordinates": {
+        "x": 30,
+        "y": 28,
+        "width": 127,
+        "height": 39
+      },
+      "dimensions": {
+        "width": 178,
+        "height": 55
+      },
+      "original_format": "PNG",
+      "size_bytes": 10539,
+      "aspect_ratio": 3.24,
+      "classification": {
+        "type": "logo",
+        "confidence": 1.0,
+        "reasoning": "small size, header position, contains text, energy_tip context",
+        "scores": {
+          "logo": 1.1,
+          "chart": 0.7,
+          "diagram": 0.3,
+          "photo": 0.7,
+          "qr_code": 0.6
+        },
+        "text_context_analysis": {
+          "has_company_references": true,
+          "has_data_references": true,
+          "has_qr_references": true,
+          "has_activity_references": true,
+          "context_type": "energy_tip"
+        }
+      },
+      "visibility_analysis": {
+        "visibility": "embedded",
+        "confidence": 0.65,
+        "detection_method": "coordinate_analysis",
+        "reasoning": "small size, header position",
+        "analysis_factors": {
+          "size_factor": {
+            "area_ratio": 0.020197893972403777,
+            "is_large": 0.06732631324134593,
+            "is_small": 1.0,
+            "is_page_sized": 0.0
+          },
+          "position_factor": {
+            "is_header": 1.0,
+            "is_footer": 0.0,
+            "is_margin": 1.0,
+            "is_centered": 0.0
+          },
+          "overlap_factor": {
+            "text_density": 0.1668372569089048,
+            "likely_overlapping": 1.0,
+            "isolated": 0.0
+          },
+          "aspect_factor": {
+            "aspect_ratio": 3.2363636363636363,
+            "is_square": 0.0,
+            "is_wide": 1.0,
+            "is_tall": 0.0
+          },
+          "content_factor": {
+            "has_text": 0.0,
+            "color_richness": 0.1,
+            "likely_graphic": 0.0,
+            "likely_photo": 0.0
+          }
+        },
+        "position_ratios": {
+          "x_ratio": 0.049,
+          "y_ratio": 0.035,
+          "width_ratio": 0.291,
+          "height_ratio": 0.069
+        }
+      },
+      "characteristics": {
+        "mean_brightness": 213.16830098740212,
+        "std_brightness": 73.94733586169643,
+        "color_means": [
+          211.676404494382,
+          213.6017364657814,
+          214.2267620020429
+        ],
+        "color_stddevs": [
+          76.79565688360036,
+          72.91920345093116,
+          72.0160283120801
+        ],
+        "dominant_color": {
+          "count": 5481,
+          "rgb": [
+            254,
+            254,
+            254
+          ]
+        },
+        "edge_density": 0.2439223697650664
+      },
+      "text_detected": true,
+      "hash": "ff7f3f0000483f2f",
+      "is_duplicate": false,
+      "enhancement_applied": true,
+      "enhanced_filename": "test_info_extract_page0_img2_logo_enhanced.jpg",
+      "text_correlation": {
+        "nearby_text": "## Home Energy Report: **electricity**",
+        "context_scores": {
+          "energy_tips": 0.5625
+        },
+        "primary_context": "energy_tips",
+        "context_confidence": 0.56,
+        "type_specific_analysis": {
+          "type": "logo",
+          "specific_indicators": [
+            "company_branding"
+          ],
+          "confidence": 0.2
+        },
+        "correlation_strength": 0.6225,
+        "supporting_relationships": [
+          "brand_identification"
+        ]
+      },
+      "contextual_description": "Company logo or branding element related to energy tips"
+    }
+  ],
+  "visibility_analysis": {},
+  "text_correlation": {},
+  "processing_summary": {
+    "total_images": 3,
+    "unique_images": 3,
+    "duplicates": 0,
+    "type_distribution": {
+      "chart": 1,
+      "qr_code": 1,
+      "logo": 1
+    },
+    "visibility_distribution": {
+      "background": 1,
+      "embedded": 2
+    },
+    "average_correlation_strength": 0.58,
+    "context_distribution": {
+      "energy_tips": 3
+    },
+    "enhancement_applied": true
+  },
+  "processing_time": 0.793499231338501
+}

@@ -1,0 +1,399 @@
+{
+  "image_dimensions": {
+    "width": 2550,
+    "height": 3301
+  },
+  "regions": [
+    {
+      "id": 0,
+      "type": "header",
+      "bbox": [
+        2087,
+        513,
+        171,
+        171
+      ],
+      "confidence": 0.3,
+      "area": 18022.0,
+      "aspect_ratio": 1.0,
+      "features": {
+        "dimensions": {
+          "width": 171,
+          "height": 171
+        },
+        "area": 18022.0,
+        "aspect_ratio": 1.0,
+        "position": {
+          "x": 2087,
+          "y": 513
+        },
+        "intensity_stats": {
+          "mean": 227.0521869977087,
+          "std": 42.515882910621684,
+          "min": 159,
+          "max": 255
+        },
+        "texture_lbp_variance": 2.071405218278736,
+        "texture_contrast": 242.66009631922944,
+        "texture_dissimilarity": 4.1765049879600955
+      },
+      "position": {
+        "absolute": {
+          "x": 2087,
+          "y": 513,
+          "center_x": 2172,
+          "center_y": 598
+        },
+        "relative": {
+          "x": 0.8184313725490197,
+          "y": 0.1554074522871857,
+          "center_x": 0.851764705882353,
+          "center_y": 0.1811572250833081
+        },
+        "quadrant": "top_right",
+        "zone": "header"
+      },
+      "classification_details": {
+        "type": "header",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.0,
+          "chart": 0.0,
+          "image": 0.0,
+          "text": 0.0,
+          "header": 0.3,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "bbox": [
+        890,
+        2250,
+        211,
+        198
+      ],
+      "confidence": 0.0,
+      "area": 17627.0,
+      "aspect_ratio": 1.0656565656565657,
+      "features": {
+        "dimensions": {
+          "width": 211,
+          "height": 198
+        },
+        "area": 17627.0,
+        "aspect_ratio": 1.0656565656565657,
+        "position": {
+          "x": 890,
+          "y": 2250
+        },
+        "intensity_stats": {
+          "mean": 231.2856048638039,
+          "std": 40.35555158109426,
+          "min": 159,
+          "max": 255
+        },
+        "texture_lbp_variance": 1.6917265565618778,
+        "texture_contrast": 229.86863876863876,
+        "texture_dissimilarity": 3.8043290043290043
+      },
+      "position": {
+        "absolute": {
+          "x": 890,
+          "y": 2250,
+          "center_x": 995,
+          "center_y": 2349
+        },
+        "relative": {
+          "x": 0.34901960784313724,
+          "y": 0.6816116328385338,
+          "center_x": 0.39019607843137255,
+          "center_y": 0.7116025446834293
+        },
+        "quadrant": "bottom_left",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.0,
+        "scores": {
+          "table": 0.0,
+          "chart": 0.0,
+          "image": 0.0,
+          "text": 0.0,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "chart",
+      "bbox": [
+        1438,
+        491,
+        72,
+        203
+      ],
+      "confidence": 0.3,
+      "area": 13966.0,
+      "aspect_ratio": 0.35467980295566504,
+      "features": {
+        "dimensions": {
+          "width": 72,
+          "height": 203
+        },
+        "area": 13966.0,
+        "aspect_ratio": 0.35467980295566504,
+        "position": {
+          "x": 1438,
+          "y": 491
+        },
+        "intensity_stats": {
+          "mean": 247.39470443349754,
+          "std": 31.471031620987805,
+          "min": 105,
+          "max": 255
+        },
+        "texture_lbp_variance": 0.6603970605725885,
+        "texture_contrast": 204.00339970859648,
+        "texture_dissimilarity": 2.0321237771456326
+      },
+      "position": {
+        "absolute": {
+          "x": 1438,
+          "y": 491,
+          "center_x": 1474,
+          "center_y": 592
+        },
+        "relative": {
+          "x": 0.563921568627451,
+          "y": 0.14874280521054226,
+          "center_x": 0.5780392156862745,
+          "center_y": 0.17933959406240532
+        },
+        "quadrant": "top_right",
+        "zone": "header"
+      },
+      "classification_details": {
+        "type": "chart",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.15,
+          "chart": 0.3,
+          "image": 0.2,
+          "text": 0.2,
+          "header": 0.3,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "chart",
+      "bbox": [
+        1357,
+        491,
+        72,
+        203
+      ],
+      "confidence": 0.3,
+      "area": 13881.0,
+      "aspect_ratio": 0.35467980295566504,
+      "features": {
+        "dimensions": {
+          "width": 72,
+          "height": 203
+        },
+        "area": 13881.0,
+        "aspect_ratio": 0.35467980295566504,
+        "position": {
+          "x": 1357,
+          "y": 491
+        },
+        "intensity_stats": {
+          "mean": 246.6794608648057,
+          "std": 32.38814830562543,
+          "min": 105,
+          "max": 255
+        },
+        "texture_lbp_variance": 0.6604072465292102,
+        "texture_contrast": 239.86900714632628,
+        "texture_dissimilarity": 2.525497814473046
+      },
+      "position": {
+        "absolute": {
+          "x": 1357,
+          "y": 491,
+          "center_x": 1393,
+          "center_y": 592
+        },
+        "relative": {
+          "x": 0.532156862745098,
+          "y": 0.14874280521054226,
+          "center_x": 0.5462745098039216,
+          "center_y": 0.17933959406240532
+        },
+        "quadrant": "top_right",
+        "zone": "header"
+      },
+      "classification_details": {
+        "type": "chart",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.15,
+          "chart": 0.3,
+          "image": 0.2,
+          "text": 0.0,
+          "header": 0.3,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "image",
+      "bbox": [
+        2035,
+        2210,
+        250,
+        250
+      ],
+      "confidence": 0.15,
+      "area": 13137.0,
+      "aspect_ratio": 1.0,
+      "features": {
+        "dimensions": {
+          "width": 250,
+          "height": 250
+        },
+        "area": 13137.0,
+        "aspect_ratio": 1.0,
+        "position": {
+          "x": 2035,
+          "y": 2210
+        },
+        "intensity_stats": {
+          "mean": 226.822224,
+          "std": 53.504239791756916,
+          "min": 121,
+          "max": 255
+        },
+        "texture_lbp_variance": 1.5669087935999997,
+        "texture_contrast": 329.3505060240964,
+        "texture_dissimilarity": 4.087437751004018
+      },
+      "position": {
+        "absolute": {
+          "x": 2035,
+          "y": 2210,
+          "center_x": 2160,
+          "center_y": 2335
+        },
+        "relative": {
+          "x": 0.7980392156862746,
+          "y": 0.669494092699182,
+          "center_x": 0.8470588235294118,
+          "center_y": 0.7073614056346562
+        },
+        "quadrant": "bottom_right",
+        "zone": "body"
+      },
+      "classification_details": {
+        "type": "image",
+        "confidence": 0.15,
+        "scores": {
+          "table": 0.0,
+          "chart": 0.1,
+          "image": 0.15,
+          "text": 0.0,
+          "header": 0.0,
+          "footer": 0.0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "bbox": [
+        617,
+        504,
+        163,
+        177
+      ],
+      "confidence": 0.3,
+      "area": 7573.0,
+      "aspect_ratio": 0.9209039548022598,
+      "features": {
+        "dimensions": {
+          "width": 163,
+          "height": 177
+        },
+        "area": 7573.0,
+        "aspect_ratio": 0.9209039548022598,
+        "position": {
+          "x": 617,
+          "y": 504
+        },
+        "intensity_stats": {
+          "mean": 228.17843402308412,
+          "std": 43.653130867292575,
+          "min": 152,
+          "max": 255
+        },
+        "texture_lbp_variance": 1.2746238566527364,
+        "texture_contrast": 283.50585896631094,
+        "texture_dissimilarity": 5.07208621050429
+      },
+      "position": {
+        "absolute": {
+          "x": 617,
+          "y": 504,
+          "center_x": 698,
+          "center_y": 592
+        },
+        "relative": {
+          "x": 0.2419607843137255,
+          "y": 0.15268100575583157,
+          "center_x": 0.27372549019607845,
+          "center_y": 0.17933959406240532
+        },
+        "quadrant": "top_left",
+        "zone": "header"
+      },
+      "classification_details": {
+        "type": "table",
+        "confidence": 0.3,
+        "scores": {
+          "table": 0.3,
+          "chart": 0.0,
+          "image": 0.0,
+          "text": 0.0,
+          "header": 0.3,
+          "footer": 0.0
+        }
+      }
+    }
+  ],
+  "layout_type": "multi_column",
+  "reading_order": [
+    3,
+    2,
+    5,
+    0,
+    4,
+    1
+  ],
+  "analysis_metadata": {
+    "total_regions": 6,
+    "region_types": {
+      "header": 1,
+      "table": 2,
+      "chart": 2,
+      "image": 1
+    },
+    "analysis_date": "2025-09-03T08:37:27.815551"
+  }
+}

@@ -1,0 +1,11 @@
+# Visual OCR Extraction: test_info_extract
+
+**Extraction Date:** 2025-09-03T08:24:26.014427
+**Average Confidence:** 89.1%
+**Total Pages:** 2
+
+---
+
+Home Energy Report: electricity March report Account number: 954137 Service address: 1627 Tulip Lane Dear JILL DOE, here is your usage analysis for March. Your electric use: 18% more than similar nearby homes You TT A bove Similar nearby homes ° a 103 kWh typ | Ca U se Efficient nearby homes hs 49 kWh Nearby homes are defined as... Monthly savings tip: Do full laundry loads. Other homes with electricity Waiting until you > neue = %6 Homes within 9 km have a full load to wy run your laundry LA can save up to 6% y Nn to 6% li mj Homes within +/- 300 sq. ft. of your energy use. =) Nearby homes are based on fuel, distance and size. Square footage Watch this space is collected from public information sources. Efficient nearby homes are the top 15 per cent efficient of similar-sized homes nearby. for new ways to save energy each month. Turn over for more savings ideas. »
+
+Your top three tailored energy-saving tips Caulk windows and doors Upgrade your refrigerator Adjust thermostat settings Save money and energy Look for an Energy Star label Biggest energy saving option One of the biggest Older model Set your smart \ money-wasters in | refrigerators are thermostat to your home is drafty very inefficient. save more (8° windows and doors. | | You can make up energy during Caulking drafty the cost of a new high-cost hours. areas is a simple DIY project Energy Star refrigerator in energy Pre-heat your home on cold days so that will pay off. savings in just a few years. that you can save more energy. Your annual electricity use compared with similar and efficient homes 200 M@ You 00 eee Ie - “i {Similar Homes = 100 = —— = —_— 0 a MH Efficient Homes April March Save more this spring Evaluate your energy efficiency Reduce use and save =) Bring in the money on your electric professionals! Assess bill with these thorough (54504 your home's energy tips, from the kitchen to efficiency with a Home S the laundry room. — Energy Audit.

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ecometricx/schemas/chunk.schema.json",
+  "title": "EcoMetricx Chunk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pipeline_version",
+    "run_id",
+    "chunk_id",
+    "parent_document_id",
+    "chunk_index",
+    "start_char",
+    "end_char",
+    "text"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "pipeline_version": { "type": "string" },
+    "run_id": { "type": "string" },
+    "chunk_id": { "type": "string" },
+    "parent_document_id": { "type": "string" },
+    "chunk_index": { "type": "integer" },
+    "start_char": { "type": "integer", "minimum": 0 },
+    "end_char": { "type": "integer", "minimum": 0 },
+    "text": { "type": "string" },
+    "page_num": { "type": "integer" },
+    "section_path": { "type": "string" },
+    "content_type": { "type": "string", "enum": ["prose", "table", "code", "other"] },
+    "tokens": { "type": "integer" },
+    "quality_score": { "type": "number" },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}
+

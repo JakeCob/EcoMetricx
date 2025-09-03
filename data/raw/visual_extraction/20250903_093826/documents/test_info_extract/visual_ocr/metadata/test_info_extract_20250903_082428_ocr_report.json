@@ -1,0 +1,15 @@
+{
+  "extraction_method": "visual_ocr",
+  "document_id": "test_info_extract",
+  "timestamp": "20250903_082428",
+  "processing_time": 3.546142101287842,
+  "text_length": 1947,
+  "average_confidence": 89.0923491414289,
+  "pages_processed": 2,
+  "dpi": 300,
+  "screenshots_saved": 0,
+  "saved_files": {
+    "ocr_text": "output/documents/test_info_extract/visual_ocr/text/test_info_extract_20250903_082428_ocr_text.txt",
+    "confidence_scores": "output/documents/test_info_extract/visual_ocr/text/test_info_extract_20250903_082428_confidence_scores.json"
+  }
+}

@@ -1,0 +1,7 @@
+document_id,image_index,filename,type,type_confidence,visibility,correlation_strength,context,description,width,height
+test_info_extract,0,test_info_extract_page0_img0_chart.jpg,chart,1.0,background,0.5625,energy_tips,Chart or data visualization related to energy tips,653,637
+test_info_extract,1,test_info_extract_page0_img1_qr_code.jpg,qr_code,0.9,embedded,0.5625,energy_tips,Image element related to energy tips,108,115
+test_info_extract,2,test_info_extract_page0_img2_logo.jpg,logo,1.0,embedded,0.6225,energy_tips,Company logo or branding element related to energy tips,178,55
+test_info_extract,0,test_info_extract_page0_img0_chart.jpg,chart,1.0,background,0.5625,energy_tips,Chart or data visualization related to energy tips,653,637
+test_info_extract,1,test_info_extract_page0_img1_qr_code.jpg,qr_code,0.9,embedded,0.5625,energy_tips,Image element related to energy tips,108,115
+test_info_extract,2,test_info_extract_page0_img2_logo.jpg,logo,1.0,embedded,0.6225,energy_tips,Company logo or branding element related to energy tips,178,55

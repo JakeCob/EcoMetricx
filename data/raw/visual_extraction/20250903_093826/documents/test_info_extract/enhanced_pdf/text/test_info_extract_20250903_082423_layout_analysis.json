@@ -1,0 +1,332 @@
+[
+  {
+    "page_number": 0,
+    "page_size": {
+      "width": 612.0,
+      "height": 792.0
+    },
+    "columns": [
+      {
+        "x0": 0,
+        "x1": 612.0,
+        "type": "single"
+      }
+    ],
+    "headers": [
+      {
+        "text": "March report Account number: 954137 Service address: 1627 Tulip Lane",
+        "bbox": [
+          358.2471008300781,
+          73.67992401123047,
+          582.13720703125,
+          134.2649383544922
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Home Energy Report: electricity",
+        "bbox": [
+          358.2471008300781,
+          23.921072006225586,
+          556.9891357421875,
+          68.02107238769531
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "footers": [
+      {
+        "text": "Turn over for  more savings ideas .",
+        "bbox": [
+          389.8301086425781,
+          743.8470458984375,
+          575.170166015625,
+          757.1069946289062
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Nearby homes are based on fuel, distance and size. Square footage  is collected from public information sources. Efficient nearby homes  are the top 15 per cent efficient of similar-sized homes nearby. ",
+        "bbox": [
+          45.4911994934082,
+          673.6737060546875,
+          290.26806640625,
+          700.5137329101562
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": " ",
+        "bbox": [
+          45.4911994934082,
+          725.9044189453125,
+          48.17499923706055,
+          736.8881225585938
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "tables": [
+      {
+        "bbox": [
+          353.0,
+          156.35443115234375,
+          588.0619384765625,
+          254.0
+        ],
+        "data": [
+          [
+            "Find your personalized\nanalysis of your electrical\nenergy use. Scan this code\nor log in to your account at\nfranklinenergy.com.",
+            "",
+            null,
+            "",
+            null
+          ],
+          [
+            null,
+            null,
+            "",
+            "",
+            ""
+          ]
+        ],
+        "rows": 2,
+        "cols": 5,
+        "confidence": 0.9
+      }
+    ],
+    "reading_order": [
+      19,
+      18,
+      20,
+      10,
+      16,
+      11,
+      14,
+      12,
+      17,
+      13,
+      15,
+      4,
+      2,
+      9,
+      0,
+      8,
+      7,
+      1,
+      5,
+      6,
+      3
+    ]
+  },
+  {
+    "page_number": 1,
+    "page_size": {
+      "width": 612.0,
+      "height": 792.0
+    },
+    "columns": [
+      {
+        "x0": 0,
+        "x1": 222.12399291992188,
+        "type": "text"
+      },
+      {
+        "x0": 276.57452392578125,
+        "x1": 612.0,
+        "type": "text"
+      }
+    ],
+    "headers": [
+      {
+        "text": "Your top three  tailored energy-saving  tips ",
+        "bbox": [
+          46.98440170288086,
+          44.18517303466797,
+          343.89288330078125,
+          60.76017379760742
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "One of the biggest money-wasters in your home is drafty windows and doors. Caulking drafty areas is a simple DIY project that will pay off.",
+        "bbox": [
+          46.289100646972656,
+          111.30480194091797,
+          170.32009887695312,
+          206.35479736328125
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Caulk windows and doors Save money and energy",
+        "bbox": [
+          46.29880142211914,
+          73.37303161621094,
+          187.69482421875,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Set your smart thermostat to  save more  energy during  high-cost hours. Pre-heat your home on cold days so that you can save more energy.",
+        "bbox": [
+          409.59881591796875,
+          111.30303192138672,
+          569.7508544921875,
+          206.35302734375
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Adjust thermostat settings Biggest energy saving option",
+        "bbox": [
+          409.6044921875,
+          73.37303161621094,
+          565.279296875,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Charge your electric vehicle   overnight for the  best rates. Check whether your home  charger includes an automated  charging feature that you can use.",
+        "bbox": [
+          222.11448669433594,
+          111.30303192138672,
+          374.5345458984375,
+          206.35302734375
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Charge your EV overnight Rates are lower after 9pm",
+        "bbox": [
+          222.12399291992188,
+          73.37303161621094,
+          368.4147644042969,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Your top three  tailored energy-saving  tips ",
+        "bbox": [
+          46.98440170288086,
+          44.18517303466797,
+          343.89288330078125,
+          60.76017379760742
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "One of the biggest money-wasters in your home is drafty windows and doors. Caulking drafty areas is a simple DIY project that will pay off.",
+        "bbox": [
+          46.289100646972656,
+          111.30480194091797,
+          170.32009887695312,
+          206.35479736328125
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Caulk windows and doors Save money and energy",
+        "bbox": [
+          46.29880142211914,
+          73.37303161621094,
+          187.69482421875,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Set your smart thermostat to  save more  energy during  high-cost hours. Pre-heat your home on cold days so that you can save more energy.",
+        "bbox": [
+          409.59881591796875,
+          111.30303192138672,
+          569.7508544921875,
+          206.35302734375
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Adjust thermostat settings Biggest energy saving option",
+        "bbox": [
+          409.6044921875,
+          73.37303161621094,
+          565.279296875,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Older model refrigerators are very inefficient. You can make up the cost of a new Energy Star refrigerator in energy  savings in just a few years. ",
+        "bbox": [
+          222.11448669433594,
+          111.30303192138672,
+          376.8345031738281,
+          206.35302734375
+        ],
+        "confidence": 0.8
+      },
+      {
+        "text": "Upgrade your refrigerator Look for an Energy Star label",
+        "bbox": [
+          222.12399291992188,
+          73.37303161621094,
+          367.671875,
+          100.22303009033203
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "footers": [
+      {
+        "text": "Seven year savings is the money you can save after purchase, installation and maintenance costs, as well as rebates, have been  accounted for. All estimates are based on standard net home proﬁle assumptions; to improve the accuracy and further customize  your Xcel Energy savings plan, visit xcelenergy.com. For questions, contact us at 800.895.4999. All the costs of each action are  estimates; check your savings plan for links to local contractors and suppliers who can provide actual costs. This Home Energy  Report was prepared speciﬁcally for you, and is provided to help you get the most value from your Xcel Energy service.  This  report is available only to you, and is based on your usage proﬁle and other publicly available information. A message from  Xcel Energy, Inc., ©2023. All Rights Reserved. ",
+        "bbox": [
+          147.3477020263672,
+          683.0098266601562,
+          586.998046875,
+          758.0023193359375
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "tables": [],
+    "reading_order": [
+      2,
+      27,
+      4,
+      29,
+      8,
+      33,
+      6,
+      31,
+      7,
+      32,
+      5,
+      30,
+      3,
+      28,
+      9,
+      34,
+      25,
+      24,
+      17,
+      23,
+      18,
+      16,
+      22,
+      19,
+      21,
+      20,
+      26,
+      10,
+      13,
+      11,
+      14,
+      12,
+      15,
+      0
+    ]
+  }
+]

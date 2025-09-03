@@ -10,7 +10,7 @@ Pillow>=9.0.0
 pytesseract>=0.3.10
 
 # Visual PDF Extraction dependencies
-pdf2image>=3.0.0
+pdf2image>=1.17.0,<2
 pdfplumber>=0.9.0
 opencv-python>=4.8.0
 
@@ -18,3 +18,9 @@ opencv-python>=4.8.0
 scikit-image>=0.25.0
 matplotlib>=3.10.0
 plotly>=6.3.0
+
+# Schema validation
+jsonschema>=4.17.0
+
+# Retrieval demo (TF-IDF)
+scikit-learn>=1.3.0

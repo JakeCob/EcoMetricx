@@ -1,0 +1,19 @@
+{
+  "created_at": "2025-09-03T08:37:32.667774",
+  "session_id": "20250903_083726",
+  "total_documents": 1,
+  "total_text_extractions": 2,
+  "total_visual_elements": 0,
+  "total_images": 6,
+  "available_indices": [
+    "text_search_index",
+    "image_search_index",
+    "elements_search_index"
+  ],
+  "database_tables": [
+    "documents_table.csv",
+    "text_extractions_table.csv",
+    "visual_elements_table.csv",
+    "images_table.csv"
+  ]
+}

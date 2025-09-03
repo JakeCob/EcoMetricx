@@ -2,3 +2,5 @@
 /__pycache__
 *.log
 output/*
+*.current_run_id
+pytest.ini

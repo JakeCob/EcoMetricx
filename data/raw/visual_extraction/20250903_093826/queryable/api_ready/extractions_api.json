@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "total": 2,
+  "data": [
+    {
+      "extraction_method": "enhanced_pdf",
+      "document_id": "test_info_extract",
+      "timestamp": "20250903_082423",
+      "processing_time": 0.3488280773162842,
+      "text_length": 1504,
+      "confidence_score": 95,
+      "pages_processed": 2,
+      "structured_elements_found": 6,
+      "saved_files": {
+        "full_text": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_full_text.txt",
+        "structured_data": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_structured_data.json",
+        "layout_analysis": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_layout_analysis.json"
+      }
+    },
+    {
+      "extraction_method": "visual_ocr",
+      "document_id": "test_info_extract",
+      "timestamp": "20250903_082428",
+      "processing_time": 3.546142101287842,
+      "text_length": 1947,
+      "average_confidence": 89.0923491414289,
+      "pages_processed": 2,
+      "dpi": 300,
+      "screenshots_saved": 0,
+      "saved_files": {
+        "ocr_text": "output/documents/test_info_extract/visual_ocr/text/test_info_extract_20250903_082428_ocr_text.txt",
+        "confidence_scores": "output/documents/test_info_extract/visual_ocr/text/test_info_extract_20250903_082428_confidence_scores.json"
+      }
+    }
+  ]
+}

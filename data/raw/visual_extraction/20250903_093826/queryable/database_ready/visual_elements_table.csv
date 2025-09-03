@@ -1,0 +1,3 @@
+extraction_method,document_id,timestamp,processing_time,total_elements,breakdown,saved_files
+visual_elements,test_info_extract,20250903_083058,4.5952513217926025,0,"{'tables': 0, 'charts': 0, 'images': 0}",{'elements_manifest': 'output/documents/test_info_extract/visual_elements/metadata/test_info_extract_20250903_083058_elements_manifest.json'}
+visual_elements,test_info_extract,20250903_083730,4.059200048446655,0,"{'tables': 0, 'charts': 0, 'images': 0}",{'elements_manifest': 'output/documents/test_info_extract/visual_elements/metadata/test_info_extract_20250903_083730_elements_manifest.json'}

@@ -1,0 +1,19 @@
+{
+  "document_id": "test_info_extract",
+  "timestamp": "20250903_083217",
+  "total_images": 3,
+  "classification_breakdown": {
+    "chart": 1,
+    "qr_code": 1,
+    "logo": 1
+  },
+  "visibility_breakdown": {
+    "background": 1,
+    "embedded": 2
+  },
+  "average_confidence": 0,
+  "saved_files": {
+    "image_analysis": "output/documents/test_info_extract/enhanced_images/metadata/test_info_extract_20250903_083217_image_analysis.json",
+    "correlation_data": "output/documents/test_info_extract/enhanced_images/metadata/test_info_extract_20250903_083217_correlation_data.json"
+  }
+}

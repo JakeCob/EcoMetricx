@@ -1,0 +1,15 @@
+{
+  "extraction_method": "enhanced_pdf",
+  "document_id": "test_info_extract",
+  "timestamp": "20250903_082423",
+  "processing_time": 0.3488280773162842,
+  "text_length": 1504,
+  "confidence_score": 95,
+  "pages_processed": 2,
+  "structured_elements_found": 6,
+  "saved_files": {
+    "full_text": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_full_text.txt",
+    "structured_data": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_structured_data.json",
+    "layout_analysis": "output/documents/test_info_extract/enhanced_pdf/text/test_info_extract_20250903_082423_layout_analysis.json"
+  }
+}

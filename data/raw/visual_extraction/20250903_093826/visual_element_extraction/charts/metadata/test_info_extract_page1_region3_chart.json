@@ -1,0 +1,105 @@
+{
+  "extraction_successful": true,
+  "chart_type": {
+    "type": "bar_chart",
+    "confidence": 0.0,
+    "scores": {
+      "bar_chart": 0.0,
+      "line_chart": 0.0,
+      "pie_chart": 0.0,
+      "scatter_plot": 0.0
+    },
+    "aspect_ratio": 0.35467980295566504
+  },
+  "chart_elements": {
+    "title": null,
+    "axis_labels": {
+      "x_axis": [],
+      "y_axis": []
+    },
+    "legend": [],
+    "data_labels": [],
+    "full_text": "\f",
+    "text_lines": []
+  },
+  "chart_data": {
+    "chart_type": "bar_chart",
+    "bars": [
+      {
+        "bbox": [
+          51,
+          59,
+          9,
+          84
+        ],
+        "area": 650.0,
+        "aspect_ratio": 0.10714285714285714,
+        "value": 84
+      }
+    ],
+    "bar_count": 1,
+    "confidence": 0.1
+  },
+  "region_info": {
+    "id": 3,
+    "type": "chart",
+    "bbox": [
+      1357,
+      491,
+      72,
+      203
+    ],
+    "confidence": 0.3,
+    "area": 13881.0,
+    "aspect_ratio": 0.35467980295566504,
+    "features": {
+      "dimensions": {
+        "width": 72,
+        "height": 203
+      },
+      "area": 13881.0,
+      "aspect_ratio": 0.35467980295566504,
+      "position": {
+        "x": 1357,
+        "y": 491
+      },
+      "intensity_stats": {
+        "mean": 246.6794608648057,
+        "std": 32.38814830562543,
+        "min": 105,
+        "max": 255
+      },
+      "texture_lbp_variance": 0.6604072465292102,
+      "texture_contrast": 239.86900714632628,
+      "texture_dissimilarity": 2.525497814473046
+    },
+    "position": {
+      "absolute": {
+        "x": 1357,
+        "y": 491,
+        "center_x": 1393,
+        "center_y": 592
+      },
+      "relative": {
+        "x": 0.532156862745098,
+        "y": 0.14874280521054226,
+        "center_x": 0.5462745098039216,
+        "center_y": 0.17933959406240532
+      },
+      "quadrant": "top_right",
+      "zone": "header"
+    },
+    "classification_details": {
+      "type": "chart",
+      "confidence": 0.3,
+      "scores": {
+        "table": 0.15,
+        "chart": 0.3,
+        "image": 0.2,
+        "text": 0.0,
+        "header": 0.3,
+        "footer": 0.0
+      }
+    }
+  }
+}

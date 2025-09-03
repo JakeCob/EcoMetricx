@@ -1,0 +1,27 @@
+{
+  "document_id": "test_info_extract",
+  "timestamp": "20250903_083732",
+  "correlations": [
+    {
+      "image_index": 0,
+      "filename": "test_info_extract_page0_img0_chart.jpg",
+      "correlation_strength": 0.5625,
+      "primary_context": "energy_tips",
+      "nearby_text": "## Home Energy Report: **electricity**"
+    },
+    {
+      "image_index": 1,
+      "filename": "test_info_extract_page0_img1_qr_code.jpg",
+      "correlation_strength": 0.5625,
+      "primary_context": "energy_tips",
+      "nearby_text": "## Home Energy Report: **electricity**"
+    },
+    {
+      "image_index": 2,
+      "filename": "test_info_extract_page0_img2_logo.jpg",
+      "correlation_strength": 0.6225,
+      "primary_context": "energy_tips",
+      "nearby_text": "## Home Energy Report: **electricity**"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "session_id": "20250903_083040",
+  "created_at": "2025-09-03T08:30:40.801396",
+  "documents_processed": [
+    "test_info_extract"
+  ],
+  "extraction_methods_used": [
+    "visual_elements",
+    "enhanced_images"
+  ],
+  "total_files_created": 5,
+  "processing_statistics": {}
+}

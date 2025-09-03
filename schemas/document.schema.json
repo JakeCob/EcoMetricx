@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ecometricx/schemas/document.schema.json",
+  "title": "EcoMetricx Document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pipeline_version",
+    "run_id",
+    "document_id",
+    "source_id",
+    "source_type",
+    "uri",
+    "title",
+    "language",
+    "mime_type",
+    "created_at",
+    "extracted_at",
+    "version",
+    "checksum",
+    "text"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "pipeline_version": { "type": "string" },
+    "run_id": { "type": "string" },
+    "document_id": { "type": "string" },
+    "source_id": { "type": "string" },
+    "source_type": { "type": "string" },
+    "uri": { "type": "string" },
+    "title": { "type": "string" },
+    "language": { "type": "string", "enum": ["en"] },
+    "mime_type": { "type": "string" },
+    "created_at": { "type": "string" },
+    "extracted_at": { "type": "string" },
+    "version": { "type": "string" },
+    "checksum": { "type": "string" },
+    "text": { "type": "string" },
+    "markdown": { "type": "string" },
+    "html": { "type": "string" },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "page_number": { "type": "integer" },
+          "text": { "type": "string" },
+          "confidence": { "type": "number" }
+        }
+      }
+    },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}
+
