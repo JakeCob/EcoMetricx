@@ -27,3 +27,7 @@ scikit-learn>=1.3.0
 
 # Embeddings (CPU-friendly)
 fastembed>=0.3.5
+
+# Database and env
+psycopg[binary,pool]>=3.2.0
+python-dotenv>=1.0.1
