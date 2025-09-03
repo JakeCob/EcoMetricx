@@ -1,8 +1,53 @@
+# Claude files
 /.claude
-/__pycache__
-*.log
-output/*
-*.current_run_id
-pytest.ini
-.env
+
+# Python
+__pycache__/
+*.py[cod]
 *.pyc
+*.pyo
+*.pyd
+
+# Environment files - NEVER commit these!
+.env
+.env.*
+!.env.example
+!.env.production
+
+# Logs
+*.log
+
+# Output directories
+output/*
+
+# Test files
+pytest.ini
+*.current_run_id
+
+# Node.js (frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+build/
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+*.temp

@@ -18,7 +18,11 @@ QDRANT_URL = os.environ.get('QDRANT_URL')
 QDRANT_API_KEY = os.environ.get('QDRANT_API_KEY')
 QDRANT_COLLECTION = os.environ.get('QDRANT_COLLECTION', 'ecometricx')
 
-app = FastAPI(title="EcoMetricx Retrieval API")
+app = FastAPI(
+    title="EcoMetricx Retrieval API",
+    version="1.0.0",
+    description="AI-powered document search API with hybrid FTS and vector search"
+)
 
 # Add CORS middleware
 app.add_middleware(
@@ -28,6 +32,32 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
+
+@app.on_event("startup")
+async def startup_event():
+    """Validate configuration on startup."""
+    print("🚀 Starting EcoMetricx Retrieval API...")
+    
+    # Validate required environment variables
+    required_vars = ["DATABASE_URL", "API_KEY"]
+    missing_vars = [var for var in required_vars if not os.environ.get(var)]
+    
+    if missing_vars:
+        print(f"❌ Missing required environment variables: {missing_vars}")
+        print("⚠️  Application will not function properly without these variables")
+    else:
+        print("✅ All required environment variables are set")
+    
+    # Optional variables
+    optional_vars = ["QDRANT_URL", "QDRANT_API_KEY", "QDRANT_COLLECTION"]
+    missing_optional = [var for var in optional_vars if not os.environ.get(var)]
+    
+    if missing_optional:
+        print(f"⚠️  Optional variables not set (vector search disabled): {missing_optional}")
+    else:
+        print("✅ Vector search configuration complete")
+    
+    print("🔍 EcoMetricx API ready for hybrid document search!")
 
 # Global HTTP client for Qdrant (lazy initialization)
 _qdrant_client: Optional[httpx.Client] = None
@@ -153,7 +183,21 @@ def _fetch_snippets(cur, chunk_ids: List[str], max_chars: int = 300) -> Dict[str
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    """Health check endpoint for Railway monitoring."""
+    try:
+        # Basic check - ensure required environment variables are set
+        if not DATABASE_URL:
+            return {"status": "error", "message": "DATABASE_URL not configured"}
+        if not API_KEY:
+            return {"status": "error", "message": "API_KEY not configured"}
+        
+        return {
+            "status": "ok", 
+            "message": "EcoMetricx API is running",
+            "version": "1.0.0"
+        }
+    except Exception as e:
+        return {"status": "error", "message": f"Health check failed: {str(e)}"}
 
 
 @app.get("/debug/config")
