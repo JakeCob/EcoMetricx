@@ -1,8 +1,9 @@
 import os, json, math
 from typing import List, Optional, Dict
 from fastapi import FastAPI, Depends, Header, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import psycopg
+import psycopg2
 import httpx
 from dotenv import load_dotenv
 
@@ -18,6 +19,15 @@ QDRANT_API_KEY = os.environ.get('QDRANT_API_KEY')
 QDRANT_COLLECTION = os.environ.get('QDRANT_COLLECTION', 'ecometricx')
 
 app = FastAPI(title="EcoMetricx Retrieval API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Global HTTP client for Qdrant (lazy initialization)
 _qdrant_client: Optional[httpx.Client] = None
@@ -46,7 +56,7 @@ class SimilarRequest(BaseModel):
 def _get_conn():
     if not DATABASE_URL:
         raise HTTPException(status_code=500, detail="DATABASE_URL not set")
-    return psycopg.connect(DATABASE_URL)
+    return psycopg2.connect(DATABASE_URL)
 
 
 def _get_qdrant_client() -> Optional[httpx.Client]:
@@ -123,13 +133,14 @@ def _search_qdrant(query_vector: List[float], k: int, filter_document_id: Option
         return {}
 
 
-def _fetch_snippets(conn: psycopg.Connection, chunk_ids: List[str], max_chars: int = 300) -> Dict[str, str]:
+def _fetch_snippets(cur, chunk_ids: List[str], max_chars: int = 300) -> Dict[str, str]:
     """Fetch text snippets for chunk_ids from Postgres."""
     if not chunk_ids:
         return {}
-    rows = conn.execute(
+    cur.execute(
         "SELECT chunk_id, text FROM chunks WHERE chunk_id = ANY(%s)", (chunk_ids,)
-    ).fetchall()
+    )
+    rows = cur.fetchall()
     mapping = {}
     for cid, text in rows:
         if text:
@@ -138,49 +149,6 @@ def _fetch_snippets(conn: psycopg.Connection, chunk_ids: List[str], max_chars: i
                 snippet = snippet[:max_chars] + "..."
             mapping[cid] = snippet
     return mapping
-    
-    try:
-        # Prepare search payload
-        payload = {
-            "vector": query_vector,
-            "limit": k,
-            "with_payload": True
-        }
-        
-        # Add filter if specified
-        if filter_document_id:
-            payload["filter"] = {
-                "must": [
-                    {
-                        "key": "parent_document_id",
-                        "match": {"value": filter_document_id}
-                    }
-                ]
-            }
-        
-        # POST /collections/{collection}/points/search
-        response = client.post(
-            f"{QDRANT_URL}/collections/{QDRANT_COLLECTION}/points/search",
-            json=payload,
-            timeout=15.0
-        )
-        response.raise_for_status()
-        
-        # Parse response and extract scores
-        result = response.json()
-        vec_scores = {}
-        
-        for hit in result.get("result", []):
-            payload_data = hit.get("payload", {})
-            chunk_id = payload_data.get("chunk_id")
-            score = hit.get("score", 0.0)
-            if chunk_id:
-                vec_scores[chunk_id] = float(score)
-        
-        return vec_scores
-    except Exception:
-        # Silently fall back to empty scores (FTS-only mode)
-        return {}
 
 
 @app.get("/health")
@@ -227,21 +195,28 @@ def debug_config():
     config["tsv_ready"] = 0
     
     try:
-        with _get_conn() as conn:
+        conn = _get_conn()
+        try:
+            cur = conn.cursor()
             # Count documents
-            row = conn.execute("SELECT COUNT(*) FROM documents").fetchone()
+            cur.execute("SELECT COUNT(*) FROM documents")
+            row = cur.fetchone()
             if row:
                 config["documents"] = row[0]
             
             # Count chunks
-            row = conn.execute("SELECT COUNT(*) FROM chunks").fetchone() 
+            cur.execute("SELECT COUNT(*) FROM chunks")
+            row = cur.fetchone()
             if row:
                 config["chunks"] = row[0]
                 
             # Count chunks with tsvector ready
-            row = conn.execute("SELECT COUNT(*) FROM chunks WHERE text_tsv IS NOT NULL").fetchone()
+            cur.execute("SELECT COUNT(*) FROM chunks WHERE text_tsv IS NOT NULL")
+            row = cur.fetchone()
             if row:
                 config["tsv_ready"] = row[0]
+        finally:
+            conn.close()
     except Exception:
         pass
     
@@ -254,7 +229,9 @@ def search(req: SearchRequest):
     Hybrid search: FTS from Postgres + vector search from Qdrant via HTTP API.
     Gracefully falls back to FTS-only if Qdrant is unavailable.
     """
-    with _get_conn() as conn:
+    conn = _get_conn()
+    try:
+        cur = conn.cursor()
         # Multi-strategy FTS search from Postgres
         # Strategy 1: Try exact phrase match
         fts_sql_exact = """
@@ -270,7 +247,8 @@ def search(req: SearchRequest):
         params = {"q": req.query, "k": req.k}
         if req.filter_document_id:
             params["doc"] = req.filter_document_id
-        fts_rows = conn.execute(fts_sql_exact, params).fetchall()
+        cur.execute(fts_sql_exact, params)
+        fts_rows = cur.fetchall()
         
         # Strategy 2: If no exact matches, try OR search with individual words
         if not fts_rows and len(req.query.split()) > 1:
@@ -292,7 +270,8 @@ def search(req: SearchRequest):
                 or_params["doc"] = req.filter_document_id
             
             try:
-                fts_rows = conn.execute(fts_sql_or, or_params).fetchall()
+                cur.execute(fts_sql_or, or_params)
+                fts_rows = cur.fetchall()
                 if fts_rows:
                     print(f"INFO: FTS OR-search activated for query '{req.query}' - {len(fts_rows)} results")
             except Exception:
@@ -335,10 +314,11 @@ def search(req: SearchRequest):
             extra_ids = [cid for cid, _ in sorted(vec_scores.items(), key=lambda x: x[1], reverse=True)
                          if cid not in fts_ids][:max(0, remaining)]
             if extra_ids:
-                rows = conn.execute(
+                cur.execute(
                     "SELECT chunk_id, parent_document_id, page_num FROM chunks WHERE chunk_id = ANY(%s)",
                     (extra_ids,)
-                ).fetchall()
+                )
+                rows = cur.fetchall()
                 meta = {row[0]: (row[1], row[2]) for row in rows}
                 for cid in extra_ids:
                     doc_id, page_num = meta.get(cid, (None, None))
@@ -359,18 +339,23 @@ def search(req: SearchRequest):
 
         # Attach snippets
         chunk_ids = [r["chunk_id"] for r in results]
-        snippets = _fetch_snippets(conn, chunk_ids)
+        snippets = _fetch_snippets(cur, chunk_ids)
         for r in results:
             r["snippet"] = snippets.get(r["chunk_id"])  # may be None
         return {"results": results}
+    finally:
+        conn.close()
 
 
 @app.post("/similar", dependencies=[Depends(require_api_key)])
 def similar(req: SimilarRequest):
     """Find similar chunks using Qdrant vector similarity."""
-    with _get_conn() as conn:
+    conn = _get_conn()
+    try:
+        cur = conn.cursor()
         # Verify chunk exists in Postgres
-        row = conn.execute("SELECT chunk_id FROM chunks WHERE chunk_id=%s", (req.chunk_id,)).fetchone()
+        cur.execute("SELECT chunk_id FROM chunks WHERE chunk_id=%s", (req.chunk_id,))
+        row = cur.fetchone()
         if not row:
             raise HTTPException(status_code=404, detail="chunk_id not found")
         
@@ -443,6 +428,8 @@ def similar(req: SimilarRequest):
             raise
         except Exception:
             raise HTTPException(status_code=503, detail="Vector search temporarily unavailable")
+    finally:
+        conn.close()
 
 
 class AnswerRequest(BaseModel):
