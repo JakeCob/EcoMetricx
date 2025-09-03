@@ -12,7 +12,10 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+# Copy the entire services directory
+COPY services/ ./services/
+
+# Copy the main.py to app root for easier execution
 COPY services/retrieval_api/main.py .
 
 # Expose port
