@@ -28,8 +28,16 @@ def main():
 
     # Compute embeddings (generator yields batches)
     vectors = []
-    for vec in embedder.embed(texts, batch_size=64):
-        vectors.append(vec)
+    for out in embedder.embed(texts, batch_size=64):
+        try:
+            # If a batch array is returned (N, D), flatten rows
+            if hasattr(out, 'shape') and len(getattr(out, 'shape', ())) == 2:
+                for row in out:
+                    vectors.append(row)
+            else:
+                vectors.append(out)
+        except Exception:
+            vectors.append(out)
 
     # Write embeddings aligned by index
     with emb_file.open('w', encoding='utf-8') as f:
@@ -47,7 +55,7 @@ def main():
         'source': source,
         'model': MODEL_NAME,
         'embedding_dim': len(vectors[0]) if vectors else 0,
-        'chunks_embedded': len(vectors),
+        'chunks_embedded': min(len(vectors), len(chunks)),
         'created_at': datetime.now(timezone.utc).isoformat()
     }
     manifest_file.write_text(json.dumps(manifest, indent=2), encoding='utf-8')

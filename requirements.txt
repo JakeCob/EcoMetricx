@@ -31,3 +31,8 @@ fastembed>=0.3.5
 # Database and env
 psycopg[binary,pool]>=3.2.0
 python-dotenv>=1.0.1
+
+# API
+fastapi>=0.112.0
+uvicorn>=0.30.0
+qdrant-client>=1.10.0

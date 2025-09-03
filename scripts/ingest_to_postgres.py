@@ -5,6 +5,7 @@ from datetime import datetime
 from typing import Iterable
 from dotenv import load_dotenv
 import psycopg
+from psycopg.types.json import Json
 
 
 def iter_jsonl(path: Path) -> Iterable[dict]:
@@ -25,14 +26,15 @@ def main():
 
     docs_path = root / 'data' / 'normalized' / source / run_id / 'documents.jsonl'
     chunks_path = root / 'data' / 'chunks' / source / run_id / 'chunks.jsonl'
-    emb_dir = root / 'data' / 'index' / 'pgvector' / run_id
-    embs_path = emb_dir / 'embeddings.jsonl'
-    assert docs_path.exists() and chunks_path.exists() and embs_path.exists(), 'Missing inputs for ingestion'
+    assert docs_path.exists() and chunks_path.exists(), 'Missing inputs for ingestion'
 
     with psycopg.connect(dsn) as conn:
         conn.execute('BEGIN')
+        
         # Upsert documents
         for d in iter_jsonl(docs_path):
+            payload = d.copy()
+            payload['metadata'] = Json(d.get('metadata'))
             conn.execute(
                 '''INSERT INTO documents (
                     document_id, source_id, source_type, uri, title, language, mime_type,
@@ -56,10 +58,12 @@ def main():
                     schema_version=EXCLUDED.schema_version,
                     pipeline_version=EXCLUDED.pipeline_version,
                     run_id=EXCLUDED.run_id,
-                    metadata=EXCLUDED.metadata''', d)
+                    metadata=EXCLUDED.metadata''', payload)
 
         # Upsert chunks
         for c in iter_jsonl(chunks_path):
+            payload = c.copy()
+            payload['metadata'] = Json(c.get('metadata'))
             conn.execute(
                 '''INSERT INTO chunks (
                     chunk_id, parent_document_id, chunk_index, start_char, end_char, text,
@@ -77,22 +81,11 @@ def main():
                     section_path=EXCLUDED.section_path,
                     content_type=EXCLUDED.content_type,
                     run_id=EXCLUDED.run_id,
-                    metadata=EXCLUDED.metadata''', c)
-
-        # Upsert embeddings
-        for e in iter_jsonl(embs_path):
-            conn.execute(
-                '''INSERT INTO chunk_embeddings (chunk_id, embedding_model, embedding)
-                   VALUES (%(chunk_id)s, %(embedding_model)s, %(embedding_vector)s)
-                   ON CONFLICT (chunk_id) DO UPDATE SET
-                     embedding_model=EXCLUDED.embedding_model,
-                     embedding=EXCLUDED.embedding''', e)
+                    metadata=EXCLUDED.metadata''', payload)
 
         conn.execute('COMMIT')
-        print('Ingestion complete for run', run_id)
+        print('✅ Ingested documents and chunks (FTS-only)')
 
 
 if __name__ == '__main__':
     main()
-
-
