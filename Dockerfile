@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 # Copy application code
 COPY main.py .
+COPY server.py .
 
 # Create non-root user for security  
 RUN useradd --create-home --shell /bin/bash app && \
@@ -22,5 +23,5 @@ USER app
 # Expose port
 EXPOSE 8000
 
-# Start the application with Python to handle PORT variable
-CMD python -c "import os, subprocess; port=os.environ.get('PORT', '8000'); print(f'Starting EcoMetricx API on port {port}'); subprocess.run(['uvicorn', 'main:app', '--host', '0.0.0.0', '--port', port])"
+# Start the application using the server script
+CMD ["python", "server.py"]
