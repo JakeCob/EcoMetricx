@@ -6,18 +6,24 @@ class EcoMetricxAPI {
   private client: AxiosInstance;
 
   constructor(baseURL: string = 'http://localhost:8000', apiKey?: string) {
+    console.log('EcoMetricxAPI Constructor:', { baseURL, apiKey: apiKey ? '[PRESENT]' : '[MISSING]' });
+    
+    // Ensure we always have an API key
+    const finalApiKey = apiKey || '-3h797xCB7IVJs9sBCfMA9rpttN7cTMZSdYtoYqpa0dFFbAJ2_gteQM5jfTPaWXf';
+    
     this.client = axios.create({
       baseURL,
       timeout: 30000,
       headers: {
         'Content-Type': 'application/json',
-        ...(apiKey && { 'x-api-key': apiKey }),
+        'x-api-key': finalApiKey,
       },
     });
 
     // Request interceptor for loading states
     this.client.interceptors.request.use((config) => {
       console.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`);
+      console.log('Request headers:', config.headers);
       return config;
     });
 
@@ -127,6 +133,7 @@ class EcoMetricxAPI {
 
   // Update API key
   setApiKey(apiKey: string) {
+    console.log('Setting API key:', apiKey ? '[PRESENT]' : '[MISSING]');
     this.client.defaults.headers['x-api-key'] = apiKey;
   }
 
@@ -138,7 +145,14 @@ class EcoMetricxAPI {
 
 // Create and export API instance
 const API_URL = process.env.REACT_APP_API_URL || 'https://ecometricx-production.up.railway.app';
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY || '-3h797xCB7IVJs9sBCfMA9rpttN7cTMZSdYtoYqpa0dFFbAJ2_gteQM5jfTPaWXf';
+
+// Debug logging
+console.log('API Configuration:', { 
+  API_URL, 
+  API_KEY_SET: !!API_KEY,
+  API_KEY_LENGTH: API_KEY?.length 
+});
 
 export const ecometricxAPI = new EcoMetricxAPI(API_URL, API_KEY);
 export default ecometricxAPI;
