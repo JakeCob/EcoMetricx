@@ -24,6 +24,8 @@ class EcoMetricxAPI {
     this.client.interceptors.request.use((config) => {
       console.log(`API Request: ${config.method?.toUpperCase()} ${config.url}`);
       console.log('Request headers:', config.headers);
+      console.log('x-api-key header:', config.headers?.['x-api-key'] ? 'PRESENT' : 'MISSING');
+      console.log('API key first 10 chars:', config.headers?.['x-api-key']?.substring(0, 10));
       return config;
     });
 
@@ -151,7 +153,9 @@ const API_KEY = process.env.REACT_APP_API_KEY || '-3h797xCB7IVJs9sBCfMA9rpttN7cT
 console.log('API Configuration:', { 
   API_URL, 
   API_KEY_SET: !!API_KEY,
-  API_KEY_LENGTH: API_KEY?.length 
+  API_KEY_LENGTH: API_KEY?.length,
+  API_KEY_FIRST_10: API_KEY?.substring(0, 10),
+  NODE_ENV: process.env.NODE_ENV
 });
 
 export const ecometricxAPI = new EcoMetricxAPI(API_URL, API_KEY);
