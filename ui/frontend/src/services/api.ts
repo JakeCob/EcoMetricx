@@ -11,7 +11,7 @@ class EcoMetricxAPI {
       timeout: 30000,
       headers: {
         'Content-Type': 'application/json',
-        ...(apiKey && { 'X-API-Key': apiKey }),
+        ...(apiKey && { 'x-api-key': apiKey }),
       },
     });
 
@@ -127,7 +127,7 @@ class EcoMetricxAPI {
 
   // Update API key
   setApiKey(apiKey: string) {
-    this.client.defaults.headers['X-API-Key'] = apiKey;
+    this.client.defaults.headers['x-api-key'] = apiKey;
   }
 
   // Update base URL
@@ -137,8 +137,8 @@ class EcoMetricxAPI {
 }
 
 // Create and export API instance
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-const API_KEY = process.env.REACT_APP_API_KEY || '-3h797xCB7IVJs9sBCfMA9rpttN7cTMZSdYtoYqpa0dFFbAJ2_gteQM5jfTPaWXf';
+const API_URL = process.env.REACT_APP_API_URL || 'https://ecometricx-production.up.railway.app';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const ecometricxAPI = new EcoMetricxAPI(API_URL, API_KEY);
 export default ecometricxAPI;

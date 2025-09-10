@@ -12,6 +12,13 @@ RUN npm ci --only=production
 # Copy source code
 COPY . .
 
+# Remove any existing .env files to prevent circular references
+RUN rm -f .env* || true
+
+# Create a clean .env file for build
+RUN echo "REACT_APP_API_URL=https://ecometricx-production.up.railway.app" > .env && \
+    echo "REACT_APP_API_KEY=placeholder" >> .env
+
 # Build the application
 RUN npm run build
 
